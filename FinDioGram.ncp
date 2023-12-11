@@ -1,0 +1,483 @@
+<Project>
+  <Name>Untitled</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.1, Culture=neutral, PublicKeyToken=null">
+    <Name>Banner</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Schedule</Name>
+        <Access>Public</Access>
+        <Location left="139" top="128" />
+        <Size width="162" height="349" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">bool openReg</Member>
+        <Member type="Property">public bool OpenReg { get; set; }</Member>
+        <Member type="Method">public void viewWaitlist(string classNumber)</Member>
+        <Member type="Method">public void manageOverride(int permission)</Member>
+        <Member type="Property">public class &lt;list&gt; classesChosen { get; set; }</Member>
+        <Member type="Property">public class&lt;list&gt; ClassList { get; set; }</Member>
+        <Member type="Method">public void addToWaitlist()</Member>
+        <Member type="Constructor">public Schedule()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Plan</Name>
+        <Access>Public</Access>
+        <Location left="397" top="203" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string semester</Member>
+        <Member type="Method">public void addCourse()</Member>
+        <Member type="Constructor">public Plan()</Member>
+        <Member type="Method">public void browse(string semester)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Structure">
+        <Name>Class</Name>
+        <Access>Public</Access>
+        <Location left="600" top="203" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int courseNumber</Member>
+        <Member type="Field">String courseName</Member>
+        <Member type="Field">double credits</Member>
+        <Member type="Field">string description</Member>
+        <Member type="Field">string profosser</Member>
+        <Member type="Field">class [] prereq</Member>
+        <Member type="Constructor">public Class()</Member>
+      </Entity>
+      <Entity type="Structure">
+        <Name>Student</Name>
+        <Access>Public</Access>
+        <Location left="484" top="541" />
+        <Size width="162" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string name</Member>
+        <Member type="Field">int id</Member>
+        <Member type="Field">class[] taken</Member>
+        <Member type="Field">double progToGrad</Member>
+        <Member type="Field">bool onHold</Member>
+        <Member type="Field">int permission</Member>
+        <Member type="Field">class[] classesChosen</Member>
+        <Member type="Constructor">public Student()</Member>
+        <Member type="Constructor">public Student(string name)</Member>
+        <Member type="Constructor">public Student(string name, int id)</Member>
+        <Member type="Constructor">public Student(int id)</Member>
+        <Member type="Method">public void removeHolds(int permissions)</Member>
+        <Member type="Method">public void managePreReq(int permisions)</Member>
+      </Entity>
+      <Entity type="Structure">
+        <Name>Advisor</Name>
+        <Access>Public</Access>
+        <Location left="139" top="512" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int permissions</Member>
+        <Member type="Field">string name</Member>
+        <Member type="Field">student [] advisy</Member>
+        <Member type="Constructor">public Advisor()</Member>
+        <Member type="Method">public void viewAdvisy()</Member>
+      </Entity>
+      <Entity type="Structure">
+        <Name>Facility</Name>
+        <Access>Public</Access>
+        <Location left="817" top="412" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int permisions</Member>
+        <Member type="Field">string name</Member>
+        <Member type="Constructor">public Facility()</Member>
+        <Member type="Method">public void manage()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>CourseCatalog</Name>
+        <Access>Public</Access>
+        <Location left="817" top="10" />
+        <Size width="162" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Class [] classesChosen</Member>
+        <Member type="Field">static Class[] classlist</Member>
+        <Member type="Field">Student user</Member>
+        <Member type="Method">public void dropCourse()</Member>
+        <Member type="Method">public void addCourse(int permisions)</Member>
+        <Member type="Method">public void browse()</Member>
+        <Member type="Constructor">public CourseCatalog()</Member>
+        <Member type="Method">public void searchCourse()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="3" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>326</X>
+          <Y>418</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>326</X>
+          <Y>453</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="0" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.1, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Hero</Name>
+        <Access>Public</Access>
+        <Location left="10" top="10" />
+        <Size width="162" height="556" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Random rand</Member>
+        <Member type="Field">public int health</Member>
+        <Member type="Field">public string name</Member>
+        <Member type="Field">public int attackmax</Member>
+        <Member type="Field">public int attackmin</Member>
+        <Member type="Field">public int speed</Member>
+        <Member type="Field">public int lvl</Member>
+        <Member type="Field">public int exp</Member>
+        <Member type="Field">public int maxHealth</Member>
+        <Member type="Field">public int lvlNeeded</Member>
+        <Member type="Field">public int tmpMin</Member>
+        <Member type="Field">public int tmpMax</Member>
+        <Member type="Field">public int Speed</Member>
+        <Member type="Field">public int smoke</Member>
+        <Member type="Field">public int slots</Member>
+        <Member type="Field">public int sped</Member>
+        <Member type="Field">public int halfHeal</Member>
+        <Member type="Field">public int fullHeal</Member>
+        <Member type="Field">public int ber</Member>
+        <Member type="Field">public int gold</Member>
+        <Member type="Constructor">public Hero()</Member>
+        <Member type="Constructor">public Hero(Hero you)</Member>
+        <Member type="Method">public void levelUp()</Member>
+        <Member type="Method">public void attack()</Member>
+        <Member type="Method">public void healthgate()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>enemy</Name>
+        <Access>Public</Access>
+        <Location left="978" top="251" />
+        <Size width="162" height="283" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static Random rand</Member>
+        <Member type="Field">public int maxattack</Member>
+        <Member type="Field">public int minattack</Member>
+        <Member type="Field">public int health</Member>
+        <Member type="Field">public int lvl</Member>
+        <Member type="Field">public string name</Member>
+        <Member type="Field">public int gold</Member>
+        <Member type="Field">public int exp</Member>
+        <Member type="Field">public int speed</Member>
+        <Member type="Field">public string attackText</Member>
+        <Member type="Field">public string startDio</Member>
+        <Member type="Method">public int die()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>JamesCordan</Name>
+        <Access>Public</Access>
+        <Location left="913" top="10" />
+        <Size width="162" height="149" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string imagepath</Member>
+        <Member type="Method">public int ImFamous()</Member>
+        <Member type="Constructor">public JamesCordan()</Member>
+        <Member type="Constructor">public JamesCordan(int level)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Prince</Name>
+        <Access>Public</Access>
+        <Location left="702" top="200" />
+        <Size width="162" height="148" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string imagepath</Member>
+        <Member type="Constructor">public Prince()</Member>
+        <Member type="Constructor">public Prince(int level)</Member>
+        <Member type="Method">public int gamble()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ShirtlessOldman</Name>
+        <Access>Public</Access>
+        <Location left="702" top="367" />
+        <Size width="162" height="152" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string imagepath</Member>
+        <Member type="Method">public int violence()</Member>
+        <Member type="Constructor">public ShirtlessOldman()</Member>
+        <Member type="Constructor">public ShirtlessOldman(int level)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Wolf</Name>
+        <Access>Public</Access>
+        <Location left="702" top="10" />
+        <Size width="162" height="161" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string imagepath</Member>
+        <Member type="Method">public int Maul()</Member>
+        <Member type="Constructor">public Wolf()</Member>
+        <Member type="Constructor">public Wolf(int level)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Boss</Name>
+        <Access>Public</Access>
+        <Location left="507" top="12" />
+        <Size width="162" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Image imagepath</Member>
+        <Member type="Field">public int pres</Member>
+        <Member type="Field">public int presSquare</Member>
+        <Member type="Constructor">public Boss()</Member>
+        <Member type="Constructor">public Boss(int prestige)</Member>
+        <Member type="Method">public hero RaiseGasPrices(hero a)</Member>
+        <Member type="Method">public hero forget(hero a)</Member>
+        <Member type="Method">public hero Fall(hero a)</Member>
+        <Member type="Method">public hero DroneStrike(hero a)</Member>
+        <Member type="Method">public hero Gridy(hero a)</Member>
+        <Member type="Method">public void SaySomething()</Member>
+        <Member type="Method">public hero Attack(hero a, Combat d)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>combat</Name>
+        <Access>Public</Access>
+        <Location left="202" top="12" />
+        <Size width="162" height="519" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int notClicked = 0</Member>
+        <Member type="Field">int damageFromBut</Member>
+        <Member type="Field">hero a</Member>
+        <Member type="Field">ShirtlessOldman man</Member>
+        <Member type="Field">Wolf wolf</Member>
+        <Member type="Field">JamesCordan james</Member>
+        <Member type="Field">Boss joe</Member>
+        <Member type="Field">Prince prince</Member>
+        <Member type="Field">Form1 orginal</Member>
+        <Member type="Field">int com</Member>
+        <Member type="Field">int comOn</Member>
+        <Member type="Field">int money</Member>
+        <Member type="Field">bool won = false</Member>
+        <Member type="Constructor">public combat(Boss m, hero n, Form1 og)</Member>
+        <Member type="Constructor">public combat(int guy, hero character, Form1 og)</Member>
+        <Member type="Method">void endgame()</Member>
+        <Member type="Method">void shirtlessOldManTurn()</Member>
+        <Member type="Method">void WolfTurn()</Member>
+        <Member type="Method">void jamesTurn()</Member>
+        <Member type="Method">void princeTurn()</Member>
+        <Member type="Method">void joeTurn()</Member>
+        <Member type="Method">void viz()</Member>
+        <Member type="Method">void inviz()</Member>
+        <Member type="Method">void run()</Member>
+        <Member type="Method">void updatePlayerStuff()</Member>
+        <Member type="Method">void closeCombat()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Shop</Name>
+        <Access>Public</Access>
+        <Location left="396" top="317" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int stalClick = 0</Member>
+        <Member type="Field">hero a</Member>
+        <Member type="Field">Form1 orginal</Member>
+        <Member type="Field">Boss sendOff = null</Member>
+        <Member type="Method">void update()</Member>
+        <Member type="Constructor">public Shop(hero tmp, Form1 og)</Member>
+        <Member type="Constructor">public Shop(hero tmp, Boss boss, Form1 OG)</Member>
+        <Member type="Method">void leave()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Generalization" first="2" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>900</X>
+          <Y>189</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>698</X>
+          <Y>186</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1044</X>
+          <Y>200</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="0" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="0" second="8">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="6" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="6" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>677</X>
+          <Y>103</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>704</X>
+          <Y>297</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>677</X>
+          <Y>303</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>679</X>
+          <Y>318</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>389</X>
+          <Y>302</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="2" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>838</X>
+          <Y>193</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>532</X>
+          <Y>309</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
