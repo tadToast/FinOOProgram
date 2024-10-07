@@ -11,7 +11,7 @@ How to run:
   1)Make sure that application files, setup, and final project are all in one folder
   2)run the setup and accept defeaults
   -windows is going to give you security warning but there shouldent be a problem
-  3)Now just run the Final Project and it should boot up the game that was made
+  3)Now run the Final Project app and it should boot up the game
 
 How to play:
   On start up, you are going to see a map with ted cruz and qustion marks
