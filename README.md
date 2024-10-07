@@ -29,6 +29,8 @@ How to play:
   If you loss, you will loss
 
 
-  Potential Problem
+  Potential Problem:
     If you hit the x on the top instead of the quit button, the curent application will close but the orginal application will keep running in the background and won't close unless you task manager it or someother way.
+
+  Problem: If you already have the program installed somehwere else and you want to move it, you will have to go to your settings and uninstall the app and then run the setup again in order for the game to run.
   
